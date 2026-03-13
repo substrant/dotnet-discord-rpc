@@ -161,21 +161,6 @@ event Action OnDisposed
 
 ---
 
-### OnMessage
-
-Triggered when a raw IPC message is received (useful for debugging).
-
-```csharp
-event Action<int, string> OnMessage
-```
-
-| Parameter | Description |
-|----------|-------------|
-| op | Discord IPC opcode |
-| message | Raw message payload |
-
----
-
 # Activity
 
 Represents a Discord Rich Presence activity.
