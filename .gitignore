@@ -1,0 +1,32 @@
+# Build results
+[Bb]in/
+[Oo]bj/
+
+# Visual Studio
+.vs/
+*.user
+*.userosscache
+*.sln.docstates
+*.suo
+
+# VS Code
+.vscode/
+
+# NuGet
+*.nupkg
+*.snupkg
+project.assets.json
+project.nuget.cache
+*.nuget.props
+*.nuget.targets
+
+# Operating System
+.DS_Store
+Thumbs.db
+
+# User-specific
+*.lock.json
+
+# Tooling
+_ReSharper*/
+*.ReSharper
