@@ -120,6 +120,14 @@ public sealed class DiscordRpcClient : IAsyncDisposable
 
     // ── Framing ─────────────────────────────────────────────────────────────
 
+    /// <summary>
+    /// Serializes and sends a payload to the IPC transport.
+    /// </summary>
+    /// <typeparam name="T">The type of the payload.</typeparam>
+    /// <param name="opcode">The opcode for the frame.</param>
+    /// <param name="payload">The data object to serialize.</param>
+    /// <param name="typeInfo">JSON type info for AOT serialization.</param>
+    /// <param name="ct">Token to cancel the operation.</param>
     private async ValueTask SendAsync<T>(Opcode opcode, T payload, System.Text.Json.Serialization.Metadata.JsonTypeInfo<T> typeInfo, CancellationToken ct)
     {
         if (!IsConnected && opcode != Opcode.Handshake)
@@ -149,6 +157,11 @@ public sealed class DiscordRpcClient : IAsyncDisposable
         }
     }
 
+    /// <summary>
+    /// Reads and parses a frame from the IPC transport.
+    /// </summary>
+    /// <param name="ct">Token to cancel the operation.</param>
+    /// <returns>A tuple containing the opcode and the raw JSON body bytes.</returns>
     private async ValueTask<(Opcode opcode, byte[] data)> ReceiveAsync(CancellationToken ct)
     {
         // Read exactly 8 header bytes
