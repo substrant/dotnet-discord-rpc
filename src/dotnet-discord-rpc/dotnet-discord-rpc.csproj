@@ -5,6 +5,15 @@
     <RootNamespace>dotnet_discord_rpc</RootNamespace>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+
+    <PackageId>Substrant.DotnetDiscordRPC</PackageId>
+    <Version>0.1.0</Version>
+    <Authors>Substrant Softworks</Authors>
+    <Company>Substrant Softworks</Company>
+    <Description>AOT-compatible high performance Discord Rich Presence client.</Description>
+
+    <PackageTags>discord rpc rich-presence ipc</PackageTags>
+    <RepositoryUrl>https://github.com/substrant/dotnet-discord-rpc</RepositoryUrl>
   </PropertyGroup>
 
 </Project>
