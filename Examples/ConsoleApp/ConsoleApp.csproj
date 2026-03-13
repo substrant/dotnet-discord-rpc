@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <ItemGroup>
-    <ProjectReference Include="..\..\dotnet-discord-rpc.csproj" />
+    <ProjectReference Include="..\..\src\dotnet-discord-rpc\dotnet-discord-rpc.csproj" />
   </ItemGroup>
 
   <PropertyGroup>

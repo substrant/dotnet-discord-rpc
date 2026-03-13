@@ -4,7 +4,7 @@ Console.Title = "Discord RPC AOT Demo";
 Console.WriteLine("Dotnet Discord RPC Example (AOT)");
 
 // 1. Create client instance (Use your own Client ID from Discord Developer Portal)
-string clientId = "1130042279550255134"; 
+string clientId = "123456789012345678"; // Replace with your actual Client ID
 if (args.Length > 0) clientId = args[0];
 
 await using var client = new DiscordRpcClient(clientId);
@@ -31,17 +31,17 @@ catch (Exception ex)
 // 4. Create an activity object
 // Make sure you have uploaded assets with these keys to your app's Rich Presence Assets
 var activity = new Activity(
-    Details: "Testing .NET 10 AOT",
+    Details: "Testing .NET 10 AOT DiscordRPC",
     State: "In the Console",
     Timestamps: new Timestamps(
         Start: DateTimeOffset.UtcNow.ToUnixTimeSeconds(),
         End: null
     ),
     Assets: new Assets(
-        LargeImage: "dotnet_big",
+        LargeImage: "some_large_image_name",
         LargeText: ".NET 10 Framework",
-        SmallImage: "vscode_small",
-        SmallText: "Visual Studio Code"
+        SmallImage: "some_small_image_name",
+        SmallText: "Some Small Text"
     ),
     Buttons: [
         new Button("View Code", "https://github.com/dotnet/core"),
